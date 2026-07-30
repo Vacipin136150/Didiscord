@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: didiscord
+    runtime: node
+    plan: free
+    buildCommand: "echo 'No build needed'"
+    startCommand: "node server.js"
+    autoDeploy: true
+    envVars:
+      - key: DATA_DIR
+        value: /opt/render/project/src
